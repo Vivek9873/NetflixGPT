@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# NETFLIX GPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Create react app
+- configure tailwind css
+- Header
+- Routing of App
+- Login Form
+- Sign up form
+- Form Validation
+- UseRef
+- Firebaes Setup
+- Deploying our app to production
+- Create signup user account
+- Implement sign in user api
+- Create redux store with userSlice
+- Implemented sign out
+- update profile
+- Fix the bugs
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded values to the constant file
+- Register TMDB app and generate api and access token
+- Fetch the nowPlaying movie list with the help of fetch function
+- Custom Hook for now playing movies
+- Create movieSlice
+- Update store with movies Data
+- Planning for maincontainer & secondary container
+- Fetch data for trailer video
+- Update stroe with trailer video data
+- Embedded the youtube video and make it autoplay and mute and loop
+- Tailwind classes to make it look awesome
+- Build Secondary container
+- Build Movie List
+- Build Movie Card
+- TMDB Image CDN url
+- Mode the Browsre page amazing with tailwind css
+- usePopular hook
+- GPT search Page
+- GPT Search Bar
+- Multi language feature in our app
+- Reused movieList component to make movie suggestion container
+- Memoization
+- Added .env file
+- Made Responsive website
 
-## Available Scripts
+# Features
 
-In the project directory, you can run:
+- Login/Sign up
+  - Sign In/ Sign up Form
+  - redirect to Browse Page
+- Browse (after authentication)
+  - Header
+  - Main Movie
+    - Tailer in Background
+    - Title & description
+    - Movie Suggestions
+      - MoviewLists \* N
+- Netflix GPT
 
-### `npm start`
+  - Search bar
+  - Movie Suggestions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - For very big form use libary like formik in react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  # GPT Feature
 
-### `npm test`
+  - For using this feature provide firstly provide your openAi api key from openai platform
+    and then add commands in the search bar like
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  # funny indain retro movies
 
-### `npm run build`
+  and hit search
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - If you don't provide either the command or api key then the default movies will appear after clicking the search button
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  # Bug that are solved
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - First is after creating the profile of a user we tried to update it with display name and photurl
+    but they are not still visible in the redux dev tool which means they are not updating
+    Therefore we call the dispatch function in the update profile also
 
-### `npm run eject`
+  - Second bug is when we are at login page and try to change the url by accessing the browse we can move to browse which should not happen like there is not any use of sign in page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Third bug is the signed in user can go to login page by changing the url of the page
+    but he/she should not go their until they are signing out
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Browse Page Planning
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Main Container
+  - VideoBackground
+  - Video Title
+- Secondary Container
+  - MovieList \* n
+  - Cards \* n
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Secondary Container Planning
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- MovieList - Popular
+- MovieList - Now Playing
+- MovieList - Trending
+- MovieList - Horror
