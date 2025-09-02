@@ -23,8 +23,7 @@ const GptSearchBar = () => {
 
             try {
                 const openai = new OpenAI({
-                    apiKey: userApiKey, // This is the default and can be omitted
-                    dangerouslyAllowBrowser: false
+                    apiKey: import.meta.env.REACT_APP_OPENAI_KEY || userApiKey, // This is the default and can be omitted
                 });
 
 
