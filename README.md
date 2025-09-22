@@ -1,5 +1,5 @@
 # NETFLIX GPT
-# Deployment link https://netflix-gpt-iota-seven.vercel.app/
+# Deployment link https://netflix-gpt-jc88.vercel.app/
 - Create react app
 - configure tailwind css
 - Header
